@@ -6,6 +6,8 @@ commandUnits:
     variable_test=$(hostname)
 
     echo "$variable_test"
+
+    echo "${host.ip}"
   commandUnitType: EXEC
   deploymentType: SSH
   name: Exec
