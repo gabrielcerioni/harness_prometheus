@@ -2,17 +2,17 @@ harnessApiVersion: '1.0'
 type: SETUP
 commandUnitType: COMMAND
 commandUnits:
+- command: curl -LO https://raw.githubusercontent.com/gabrielcerioni/harness_prometheus/main/prom_configs/prometheus.yml
+  commandUnitType: EXEC
+  deploymentType: SSH
+  name: Copy the latest Prometheus Config
+  scriptType: BASH
+  workingDirectory: /tmp
 - command: |
     curl -i -X POST http://localhost:9090/-/reload
   commandUnitType: EXEC
   deploymentType: SSH
   name: Exec
-  scriptType: BASH
-  workingDirectory: /tmp
-- command: curl -LO https://raw.githubusercontent.com/gabrielcerioni/harness_prometheus/main/prom_configs/prometheus.yml
-  commandUnitType: EXEC
-  deploymentType: SSH
-  name: Copy the latest Prometheus Config
   scriptType: BASH
   workingDirectory: /tmp
 targetToAllEnv: true
