@@ -50,7 +50,7 @@ phases:
         outputVars: ''
         publishAsVar: false
         scriptString: |-
-          variabletest=hostname
+          variabletest=$(hostname)
 
           echo "$variabletest"
         scriptType: BASH
