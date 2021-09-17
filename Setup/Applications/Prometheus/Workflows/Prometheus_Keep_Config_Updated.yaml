@@ -39,6 +39,11 @@ phases:
     stepsInParallel: false
   - type: DEPLOY_SERVICE
     name: Deploy Service
+    steps:
+    - type: COMMAND
+      name: reload_prometheus_via_api
+      properties:
+        commandName: reload_prometheus_via_api
     stepsInParallel: false
   - type: ENABLE_SERVICE
     name: Enable Service
