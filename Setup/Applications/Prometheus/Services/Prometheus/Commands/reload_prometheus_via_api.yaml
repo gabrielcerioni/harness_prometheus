@@ -12,7 +12,7 @@ commandUnits:
     curl -i -X POST http://localhost:9090/-/reload
   commandUnitType: EXEC
   deploymentType: SSH
-  name: Exec
+  name: Reload Prometheus
   scriptType: BASH
   workingDirectory: /tmp
 targetToAllEnv: true
