@@ -9,4 +9,10 @@ commandUnits:
   name: Exec
   scriptType: BASH
   workingDirectory: /tmp
+- command: curl -LO https://raw.githubusercontent.com/gabrielcerioni/harness_prometheus/main/prom_configs/prometheus.yml
+  commandUnitType: EXEC
+  deploymentType: SSH
+  name: Copy the latest Prometheus Config
+  scriptType: BASH
+  workingDirectory: /tmp
 targetToAllEnv: true
