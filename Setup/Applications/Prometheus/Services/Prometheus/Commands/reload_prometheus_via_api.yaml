@@ -2,7 +2,7 @@ harnessApiVersion: '1.0'
 type: SETUP
 commandUnitType: COMMAND
 commandUnits:
-- command: curl -L https://raw.githubusercontent.com/gabrielcerioni/harness_prometheus/main/prom_configs/prometheus.yml -o /etc/prometheus/prometheus.yml
+- command: sudo curl -L https://raw.githubusercontent.com/gabrielcerioni/harness_prometheus/main/prom_configs/prometheus.yml -o /etc/prometheus/prometheus.yml
   commandUnitType: EXEC
   deploymentType: SSH
   name: Copy the latest Prometheus Config
