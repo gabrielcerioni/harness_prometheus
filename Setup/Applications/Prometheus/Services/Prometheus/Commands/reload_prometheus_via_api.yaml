@@ -1,4 +1,14 @@
 harnessApiVersion: '1.0'
 type: SETUP
 commandUnitType: COMMAND
+commandUnits:
+- command: |-
+    variable_test=$(hostname)
+
+    echo "$variable_test"
+  commandUnitType: EXEC
+  deploymentType: SSH
+  name: Exec
+  scriptType: BASH
+  workingDirectory: /tmp
 targetToAllEnv: true
