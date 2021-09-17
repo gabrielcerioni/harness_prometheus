@@ -2,12 +2,8 @@ harnessApiVersion: '1.0'
 type: SETUP
 commandUnitType: COMMAND
 commandUnits:
-- command: |-
-    variable_test=$(hostname)
-
-    echo "$variable_test"
-
-    echo "${host.ip}"
+- command: |
+    curl -i -X POST http://localhost:9090/-/reload
   commandUnitType: EXEC
   deploymentType: SSH
   name: Exec
