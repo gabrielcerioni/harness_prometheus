@@ -1,5 +1,8 @@
 harnessApiVersion: '1.0'
 type: APPLICATION
+branchName: harness-gitsync
 description: To host all Services and Workflows related to our Prometheus!
+gitConnector: gabs_harness_gh
+isGitSyncEnabled: true
 tags:
   Prometheus: ''
